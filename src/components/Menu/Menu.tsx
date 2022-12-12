@@ -14,7 +14,7 @@ function Menu({ data }: Props) {
 						label={value.text}
 						icon={value.icon}
 						size='large'
-						handleClick={() => {}}
+						handleclick={() => {}}
 					/>
 				</Grid>
 			))}

@@ -6,5 +6,6 @@ export const ButtonStyle = styled(Button)<ButtonProps>(() => ({
   textTransform: 'capitalize',
   padding: '4px 24px',
   boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.25)',
-  fontSize: '1rem'
+  fontSize: '1rem',
+  whiteSpace: 'nowrap',
 }));

@@ -1,24 +1,29 @@
 import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
-import ChartDataLabels from 'chartjs-plugin-datalabels';
+import ChartDataLabels, { Context } from 'chartjs-plugin-datalabels';
 import colors from '../../theme/color';
 
 const { violet, blue, green, orange, yellow } = colors.chart;
-ChartJS.register(ArcElement, Tooltip, ChartDataLabels);
+ChartJS.register(ArcElement, ChartDataLabels, Tooltip);
 
 const options: any = {
 	responsive: true,
 	plugins: {
 		datalabels: {
 			color: 'white',
+			formatter: (_: any, context: Context) => {
+				const labels = context.chart.data?.labels;
+				const result = labels?.length ? labels[0] : 0;
+
+				return result;
+			},
 			labels: {
 				title: {
 					font: {
-						weight: 'bold',
+						lineHeight: 2,
+						size: '12.5rem',
+						weight: 500,
 					},
-				},
-				value: {
-					color: 'white',
 				},
 			},
 		},
@@ -40,7 +45,6 @@ const data = {
 	labels: ['Campeones', 'Potenciales', 'En riesgo', 'Olvidados', 'Dormidos'],
 	datasets: [
 		{
-			label: '#',
 			data: [20, 20, 20, 20, 20],
 			backgroundColor: chartColors,
 			borderColor: chartColors,

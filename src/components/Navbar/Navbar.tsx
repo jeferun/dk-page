@@ -18,7 +18,7 @@ function NavBar() {
 			justifyContent='space-between'
 			alignItems='center'
 		>
-			<Grid item container lg={8} justifyContent='space-between'>
+			<Grid item container sm={5} md='auto' lg={8} justifyContent='space-between'>
 				<img src={Logo} alt='logo' height={42} />
 				<Grid item>
 					<IconButton color='inherit' component='label'>
@@ -32,13 +32,16 @@ function NavBar() {
 			<Grid
 				item
 				container
+				wrap='nowrap'
+				sm={7}
+				md={6}
 				lg={4}
 				alignItems='center'
 				justifyContent='space-evenly'
 			>
 				<Divider orientation='vertical' variant='middle' flexItem />
 				<Avatar>JL</Avatar>
-				<Typography> James Logan</Typography>
+				<Typography whiteSpace='nowrap'> James Logan</Typography>
 				<IconButton color='inherit' component='label'>
 					<ExpandMore />
 				</IconButton>

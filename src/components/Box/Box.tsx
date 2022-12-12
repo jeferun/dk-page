@@ -4,7 +4,7 @@ import IconButton from '@mui/material/IconButton';
 import { AvatarStyle, Props } from './styles';
 
 function Box(props: Props) {
-	const isClick = Boolean(props.handleClick);
+	const isClick = Boolean(props.handleclick);
 
 	return (
 		<Grid
@@ -14,11 +14,7 @@ function Box(props: Props) {
 			direction='column'
 		>
 			{isClick ? (
-				<IconButton
-					aria-label='menu'
-					component='label'
-					onClick={props.handleClick}
-				>
+				<IconButton component='button' onClick={props.handleclick}>
 					<AvatarStyle {...props}>{props.icon}</AvatarStyle>
 				</IconButton>
 			) : (

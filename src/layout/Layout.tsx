@@ -13,10 +13,10 @@ function Layout({ children }: IProps) {
 	return (
 		<ThemeProvider theme={themeDefault}>
 			<CssBaseline />
-			<Navbar />
-			<Container maxWidth='lg'>
-				{children}
-			</Container>
+			<>
+				<Navbar />
+				<Container maxWidth='lg'>{children}</Container>
+			</>
 		</ThemeProvider>
 	);
 }

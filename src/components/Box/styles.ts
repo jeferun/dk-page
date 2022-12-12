@@ -6,7 +6,7 @@ export interface Props {
   label?: string;
   size?: 'small' | 'large';
   icon?: string | JSX.Element;
-  handleClick?: () => void;
+  handleclick?: () => void;
 }
 
 const large = 72;
