@@ -1,3 +1,9 @@
+### `dk-page`
+
+## Was deployed in
+
+Netlify [Click aquí](https://dk-page.netlify.app/)
+
 ### `nvm use`
 Changes node version. Version <19.1.0>
 
